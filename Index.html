@@ -52,13 +52,11 @@ Wayne Collier
 		<div id="featured-cupcake" class="grid_7">
 			<h2>Cupcake of the Week</h2>
 			<p>This week's featured cupcake is the <a href="#">Avocado Chocolate cupcake</a>. Its strange combo of flavors will kick your tastebuds into fiesta mode!</p>
-			<div data-picture data-alt="Avocado Chocolate Cupcake">
-				<div data-src="external/imgs/avocado-small.jpg"></div>
-				<div data-src="external/imgs/avocado-medium.jpg"	data-media="(min-width: 400px)"></div>
-				<div data-src="external/imgs/avocado-large.jpg"	data-media="(min-width: 800px)"></div>
-				<div data-src="external/imgs/avocado-extralarge.jpg"	data-media="(min-width: 1000px)"></div>
-				<!--Code for Retina devices--><!--z<div data-src="external/imgs/extralarge_x2.jpg"	data-media="(min-width: 1000px) and (min-device-pixel-ratio: 2.0)"></div>-->
-			</div>
+
+			<div id="featured-video">
+        		<iframe src="http://player.vimeo.com/video/50610288?title=0&amp;byline=0&amp;portrait=0" width="400" height="275" frameborder="0"></iframe>
+        	</div>
+
 		</div>
 		<div id="new-cupcakes" class="grid_5 omega">
 			<h2>Fresh Out the Oven</h2>
@@ -100,11 +98,18 @@ Wayne Collier
 
 	</div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="jquery.fitvids.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    // Target your .container, .wrapper, .post, etc.
+	    $("#featured-video").fitVids();
+	  });
 	</script>
-	<script> src="jquery.fittext.js"></script>
+
+	<script src="jquery.fittext.js"></script>
 	<script type="text/javascript">
-		$("#fittext1").fitText(1);
+		$("#fittext1").fitText(2.2);
 	</script>
 	<!--<script>
 		$(function() {
